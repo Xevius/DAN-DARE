@@ -57,9 +57,9 @@ Bitmap=new Array(kolkadr);
   
 ObjectX=new Array(0,0,6,26,46,360,340,757,737,717,402,422,13,33,53,724,744,764);
 ObjectY=new Array(0,0,147,163,171,151,159,147,163,171,151,159,147,163,171,171,163,147);
-DirFileName=new Array("Dandare1/Stars/Star1","Dandare1/Stars/Star2","Dandare1/Textures/Mayak1",
-"Dandare1/Textures/Mayak2","Dandare1/Textures/Mayak3","Dandare1/Textures/Anthena1","Dandare1/Textures/Anthena2",
-"Dandare1/Textures/Cube","Dandare1/Textures/Tube","Dandare1/Textures/Mayak/Mayak");
+DirFileName=new Array("Dandare1/Stars/Star1","Dandare1/Stars/Star2","Dandare1/Textures/mayak1",
+"Dandare1/Textures/mayak2","Dandare1/Textures/mayak3","Dandare1/Textures/anthena1","Dandare1/Textures/anthena2",
+"Dandare1/Textures/cube","Dandare1/Textures/tube","Dandare1/Textures/Mayak/Mayak");
 
 function CreateGround(objnum1,objnum2,objnum3,objnum4,x1,y1,x2,y2,step)
 {
@@ -121,8 +121,8 @@ for (i=mass1; i<=mass2; i=i+1)
 function CreateTable(Left1,Top1,TableWidth,TableHeight)
 {
 document.fgColor="yellow";
-ApITable="<TABLE name='table1' STYLE='position: absolute; Left:"+Left1+"; Top:"+Top1+
-"' bordercolor=white border=0 cellspacing=0 cellpadding=0 width:"+TableWidth+" height:"+TableHeight+">"+
+ApITable="<TABLE name='table1' cellspacing=0 cellpadding=0 border=0 STYLE='position: absolute; Left:"+Left1+"; Top:"+Top1+
+"; border: 0 solid white; width:"+TableWidth+"; height:"+TableHeight+";'>"+
 "<TR>"+
 "<TD><IMG name='ugol1' src='Images/ZX-Spectrum/Dandare1/Table/UpLeftAngle.bmp' width=4 height=4></TD>"+
 "<TD><IMG name='ramka1' src='Images/ZX-Spectrum/Dandare1/Table/UpHorizontLine.bmp' width="+TableWidth+" height=4></TD>"+
@@ -270,9 +270,9 @@ document.onmousemove = function(e)
 	
 }
 	
-document.onmouseout = function(e)
+document.onmouseout = function(event)
 {
-OldX2 = MouseCoords.getX(e);
+OldX2 = MouseCoords.getX(event);
 if (event.table1='Dan'){
                          if (OldX2>=OldX1){
 						                   document.Dan.src='Images/Dan1_5.png';
@@ -322,7 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 <div id="mouse_coords_on_click"></div>
 
-</script>
+
 
 </body>
 </html>
